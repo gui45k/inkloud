@@ -1,0 +1,206 @@
+# PROJETO: GEOSOLO AI — Sistema Inteligente de Análise e Pesquisa de Solos
+
+Atue como uma equipe multidisciplinar composta por engenheiro geotécnico, cientista de solos, pesquisador em Engenharia Civil, especialista em inteligência artificial, desenvolvedor de software científico e designer de interfaces educacionais.
+
+Quero desenvolver uma plataforma chamada **GeoSolo AI**, destinada à análise, interpretação e investigação científica de solos, com foco inicial nos solos do semiárido brasileiro, especialmente do Ceará.
+
+O projeto começa como um protótipo de software, mas deve ser planejado para evoluir para uma ferramenta de apoio à pesquisa universitária, com possibilidade de gerar trabalhos científicos, participar de competições de inovação e contribuir para a Engenharia Civil.
+
+## 1. OBJETIVO PRINCIPAL
+
+Desenvolver uma plataforma interativa capaz de receber propriedades de amostras de solo, apresentar interpretações geotécnicas fundamentadas, comparar amostras e ajudar o pesquisador a formular hipóteses e planejar experimentos.
+
+Não quero apenas uma interface bonita ou um chatbot genérico. Quero um sistema funcional, com cálculos reais, visualizações dinâmicas, validação de dados e uma arquitetura preparada para incorporar modelos de inteligência artificial.
+
+## 2. FUNCIONALIDADES PRINCIPAIS
+
+### Módulo A — Cadastro e caracterização do solo
+
+Permitir que o usuário cadastre amostras com:
+
+* Identificação da amostra;
+* Local de coleta e profundidade;
+* Data e condições de coleta;
+* Distribuição granulométrica;
+* Teor de umidade;
+* Limites de liquidez e plasticidade, quando aplicáveis;
+* Massa específica dos grãos;
+* Massa específica aparente seca;
+* Resultados de compactação;
+* Resultados de CBR/ISC, expansão e resistência, quando disponíveis;
+* Observações de campo e fotografias.
+
+Validar unidades, valores impossíveis, campos obrigatórios e dados ausentes. Nunca inventar resultados laboratoriais.
+
+### Módulo B — Análise geotécnica
+
+Implementar, quando houver dados suficientes:
+
+* Cálculo do índice de plasticidade;
+* Cálculo do grau de saturação, índice de vazios e porosidade, quando as variáveis necessárias estiverem disponíveis;
+* Curvas granulométricas;
+* Curvas de compactação;
+* Comparação entre amostras;
+* Classificação geotécnica por sistemas reconhecidos, com indicação do sistema utilizado e das informações necessárias;
+* Visualização de resultados de CBR e resistência, sem presumir valores não medidos.
+
+Apresentar fórmulas, unidades, dados de entrada e memória de cálculo para que os resultados possam ser conferidos manualmente.
+
+Não tratar correlações empíricas como leis universais. Explicar as condições e limitações de aplicação de cada método.
+
+### Módulo C — Inteligência artificial para pesquisa
+
+Criar um assistente científico que:
+
+1. Interprete os dados fornecidos pelo usuário;
+2. Identifique tendências e possíveis relações entre propriedades;
+3. Sugira hipóteses científicas testáveis;
+4. Recomende ensaios complementares com justificativa;
+5. Identifique inconsistências e dados insuficientes;
+6. Ajude a estruturar protocolos experimentais;
+7. Organize resultados e gere relatórios técnicos preliminares;
+8. Sugira palavras-chave e estratégias de busca bibliográfica.
+
+A IA deve distinguir claramente:
+
+* Dados medidos;
+* Valores calculados;
+* Estimativas de modelos;
+* Hipóteses;
+* Informações bibliográficas.
+
+Nunca inventar artigos científicos, referências, normas ou resultados experimentais. Quando não puder verificar uma fonte, declarar essa limitação.
+
+### Módulo D — Simulador de umedecimento e secagem
+
+Criar um ambiente visual para investigar como mudanças de umidade podem estar associadas a alterações nas propriedades do solo.
+
+Permitir ao usuário:
+
+* Escolher uma amostra cadastrada;
+* Informar condições iniciais;
+* Definir cenários de umedecimento e secagem;
+* Visualizar gráficos ao longo dos ciclos;
+* Comparar cenários hipotéticos;
+* Registrar fissuras observadas experimentalmente;
+* Comparar resultados experimentais com previsões de modelos.
+
+IMPORTANTE: não simular fenômenos físicos como se fossem resultados reais sem um modelo validado. Enquanto não houver um modelo calibrado, identificar todas as curvas geradas como demonstrações hipotéticas. Não afirmar que o sistema prevê fissuras ou resistência com precisão sem validação experimental.
+
+### Módulo E — Planejamento experimental
+
+Criar uma ferramenta para ajudar o pesquisador a planejar experimentos com:
+
+* Pergunta científica;
+* Hipótese;
+* Variáveis independentes e dependentes;
+* Grupos de controle;
+* Número de condições experimentais;
+* Réplicas;
+* Procedimentos;
+* Métodos de análise estatística;
+* Critérios de validação;
+* Registro de incertezas;
+* Cronograma;
+* Estimativa de materiais e custos.
+
+O sistema deve ajudar a evitar experimentos mal planejados e explicar quando é necessária a orientação de um professor.
+
+### Módulo F — Relatórios científicos
+
+Permitir a geração de relatórios contendo:
+
+* Caracterização da amostra;
+* Dados utilizados;
+* Fórmulas e cálculos;
+* Gráficos;
+* Resultados;
+* Limitações;
+* Discussão preliminar;
+* Referências verificáveis;
+* Metodologia reproduzível.
+
+Preparar a estrutura para exportação em CSV e relatórios compatíveis com o trabalho acadêmico.
+
+## 3. INTERFACE
+
+Desenvolver uma interface moderna, profissional e responsiva, adequada para computadores e celulares.
+
+A tela inicial deve apresentar:
+
+* Painel de amostras cadastradas;
+* Botão para adicionar amostra;
+* Acesso à análise geotécnica;
+* Acesso ao simulador;
+* Assistente científico;
+* Planejamento experimental;
+* Relatórios e gráficos.
+
+Utilizar gráficos interativos, tabelas, indicadores de qualidade dos dados e unidades visíveis.
+
+O visual deve lembrar uma plataforma científica de Engenharia, não um site comercial genérico.
+
+## 4. TECNOLOGIA E ARQUITETURA
+
+Antes de implementar, escolha uma arquitetura adequada ao protótipo, priorizando ferramentas gratuitas ou de baixo custo.
+
+Se for apropriado, utilize:
+
+* React e TypeScript para a interface;
+* Python para cálculos científicos e futuras análises;
+* Bibliotecas de gráficos;
+* Uma estrutura modular para adicionar novos modelos;
+* Persistência de dados segura, quando necessária.
+
+Não dependa de uma API paga para que as funções básicas funcionem.
+
+Comece com cálculos determinísticos e modelos simples. A integração com um modelo de linguagem deve ser opcional e não substituir os cálculos geotécnicos.
+
+Se o ambiente disponível não permitir uma aplicação completa com backend, crie uma primeira versão funcional que execute no navegador e explique as limitações.
+
+## 5. VALIDAÇÃO CIENTÍFICA
+
+Implemente testes automatizados para os cálculos.
+
+Crie exemplos de dados claramente identificados como fictícios para demonstrar a plataforma. Inclua casos de teste com resultados esperados e verificação de unidades.
+
+Não alegue que o sistema está cientificamente validado apenas porque os testes de software passaram.
+
+Planeje uma etapa futura de comparação entre previsões e resultados de ensaios reais, com métricas de erro e avaliação das incertezas.
+
+## 6. ORIGINALIDADE E POSSÍVEL PUBLICAÇÃO
+
+Estruture o projeto de modo que futuramente seja possível investigar uma contribuição científica original, por exemplo:
+
+* Um método de integração de dados geotécnicos;
+* Um modelo preditivo desenvolvido e validado para uma aplicação específica;
+* Uma metodologia de análise de fissuras por imagens;
+* Uma ferramenta de apoio à decisão calibrada para determinado tipo de solo.
+
+Não afirme que a plataforma é inédita ou patenteável sem uma pesquisa de anterioridade.
+
+Prepare a arquitetura para registrar a versão do software, os dados de entrada, os métodos utilizados e as condições de cada análise, permitindo reproduzir os resultados.
+
+## 7. COMO VOCÊ DEVE TRABALHAR
+
+Primeiro, apresente:
+
+1. A arquitetura proposta;
+2. As funcionalidades que realmente serão implementadas;
+3. As limitações técnicas;
+4. O plano de desenvolvimento.
+
+Em seguida, desenvolva a aplicação funcional, começando por um MVP — produto mínimo viável.
+
+Priorize nesta ordem:
+
+1. Cadastro de amostras;
+2. Cálculos geotécnicos verificáveis;
+3. Gráficos e comparação de amostras;
+4. Planejamento experimental;
+5. Assistente científico;
+6. Simulação e modelos preditivos, somente quando houver base técnica suficiente.
+
+Não entregue apenas um plano, uma imagem ou uma página estática. Implemente o máximo possível das funcionalidades no ambiente disponível, teste os principais fluxos e informe com transparência o que funciona, o que é demonstrativo e o que ainda precisa ser desenvolvido.
+
+O resultado deve ser um protótipo real, utilizável, cientificamente responsável e preparado para evoluir com orientação docente.
